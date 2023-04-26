@@ -1,4 +1,4 @@
-# receta_me
+# Receta Me!
 A recipe website for now, but... in the future, something more!
 
 ## Disclaimer
