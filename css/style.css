@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Carlito', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+  min-height:100svh;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #00BF79;
+}
+
+a:hover {
+  color: #00633f;
+}
+
+button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Menu */
+
+header {
+  background-color: #FFF;
+  width: 100%;
+  height: 80px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 5px 5px #18181825;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #181818;
+}
+
+
+/* Homepage Intro */
+
+#home-intro-vid {
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+#home-intro-vid video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+#home-intro-vid::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(120deg,#B4FF66ce,#00BF79ce);
+}
+
+.home-intro {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  height: 100vh;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1.hero-title, p.home-title, .home-description p {
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 5px #00472d75;
+}
+
+.home-intro hr { 
+  width: 20%;
+  color: #fff;
+  min-width: 200px;
+}
+
+h1.hero-title {
+  margin-top: -25%;
+  font-weight: 400;
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;;
+}
+
+p.home-title {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  margin: 2rem 0 1rem;
+}
+
+.home-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #00472d75;
+  border-radius: 8px;
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  width: 60%;
+  max-width: 920px;
+  min-width: 320px;
+}
+
+.home-description p {
+  font-size: 1.2rem;
+}
+
+
+/* Featured cards */
+
+.featured {
+  width: 90%;
+  position: relative;
+  top: -225px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.featured-recipe {
+  background-color: white;
+  max-width: 325px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #18181825;
+  margin-bottom: 85px;
+}
+
+.featured-combo {
+  position: relative;
+}
+
+.feat-user-img {
+  width: 88px;
+  height: auto;
+  outline: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px #18181825;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+}
+
+.feat-img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.feat-info {
+  padding: 24px 32px;
+}
+
+h3.featured-title {
+  font-size: 1.6rem;
+}
+
+.featured-user {
+  color: #707070;
+  font-weight: 700;
+}
+
+p.featured-description {
+  margin: 20px 0;
+}
+
+a.featured-link {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  text-align: right;
+  border-top: 1px solid #00BF79;
+  padding: 0.5rem 0 0;
+  margin-top: 1rem;
+}
+
+a.featured-link::after{
+  content: '';
+  position: relative;
+  top: 0.4rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url(../img/icons/arrow-right.svg);
+  background-size: cover;
+}
+
+a.featured-link:hover::after {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(6039%) hue-rotate(164deg) brightness(92%) contrast(101%);
+}
+
+
+/* Buttons */
+
+
+button.home-btn {
+  color: #00BF79;
+  background-color: #fff;
+}
+
+
+/* Footer */
+footer {
+  background-color: #1B2936;
+  color: #fff;
+  margin-top: auto;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

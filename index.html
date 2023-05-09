@@ -1,83 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta Me!</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receta Me!</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <a href="index.html" title="Home"><img src="img/00_logo_receta_me.png" alt="Logo de Receta Me!" width="200"></a>
-            <nav class="navbar">
-                <a href="index.html" title="Inicio">Inicio</a>
-                <a href="pages/recetas.html" title="Recetas">Recetas</a>
-                <a href="pages/acerca-de.html" title="Acerca de">Acerca de</a>
-                <a href="pages/contacto.html" title="Contacto">Contacto</a>
-            </nav>
-        </header>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="index.html" title="Home"><img src="img/00_logo_receta_me.png" alt="Logo de Receta Me!" width="160"></a>
+      </div>
 
-        <main class="home-content">
-            <div class="home-slider">
-                <h1>Receta Me!</h1>
-                <p class="home-title">No eres tú, soy yo. ¡En mi casa lo cocino así!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <img src="" alt="" class="main-img">
+      <nav class="navbar">
+        <a href="index.html" title="Inicio">Inicio</a>
+        <a href="pages/recetas.html" title="Recetas">Recetas</a>
+        <a href="pages/acerca-de.html" title="Acerca de">Acerca de</a>
+        <a href="pages/contacto.html" title="Contacto">Contacto</a>
+      </nav>
+    </header>
+
+      <div id="home-intro-vid">
+        <video muted autoplay playsinline loop id="home-video">
+          <source src="video/pexels-luna-lovegood-4474373-1920x1080-50fps.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="home-intro">
+        <h1 class="hero-title">Receta... Me!</h1>
+        <hr>
+        <p class="home-title">No eres tú, soy yo.<br>¡En mi casa lo cocino así!</p>
+        <div class="home-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</p>
+            <button class="home-btn" type="button">Ver todas las recetas</button>
+        </div>
+      </div>    
+
+        <div class="featured">
+          <div class="featured-recipe">
+            <div class="featured-combo">
+              <img src="img/user_3.jpg" alt="Avatar de usuario 3" class="feat-user-img">
+              <img src="img/thumbnail_costillar_asado.jpg" alt="Fotografía de costillar asado en plato" class="feat-img">
             </div>
 
-            <div class="featured">
-                <div class="featured-recipe">
-                    <div class="featured-combo">
-                        
-
-                    </div>
-                    <h3 class="featured-title">Costillar asado</h3>
-                    <span class="featured-user">@dalbor</span>
-                    <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="pages/recipes/costillar_asado.html" class="featured-link" title="Ver receta">Ver receta</a>
-                </div>
-                <div class="featured-recipe">
-                    <div class="featured-combo">
-
-
-                    </div>
-                    <h3 class="featured-title">Pancakes</h3>
-                    <span class="featured-user">@clauclao</span>
-                    <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="pages/recipes/pancakes.html" class="featured-link" title="Ver receta">Ver receta</a>
-                </div>
-                <div class="featured-recipe">
-                    <div class="featured-combo">
-
-
-                    </div>
-                    <h3 class="featured-title">Ramen</h3>
-                    <span class="featured-user">@charleszeron</span>
-                    <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="pages/recipes/ramen.html" class="featured-link" title="Ver receta">Ver receta</a>
-                </div>
-                <div class="featured-recipe">
-                    <div class="featured-combo">
-
-
-                    </div>
-                    <h3 class="featured-title">Tarta de queso</h3>
-                    <span class="featured-user">@sandr1ta</span>
-                    <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="pages/recipes/tarta_de_queso.html" class="featured-link" title="Ver receta">Ver receta</a>
-                </div>
+            <div class="feat-info">
+              <h3 class="featured-title">Costillar asado</h3>
+              <span class="featured-user">@dalbor</span>
+              <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a href="pages/recipes/costillar_asado.html" class="featured-link" title="Ver receta">Ver receta</a>
             </div>
+          </div>
 
-        </main>
-        <footer>
-            <span class="page-disclaimer">viexher &copy;<span id="year"></span>. Todos los derechos reservados.</span>
-        </footer>
-    </div>
+        <div class="featured-recipe">
+            <div class="featured-combo">
+              <img src="img/user_2.jpg" alt="Avatar de usuario 2" class="feat-user-img">
+              <img src="img/thumbnail_pancakes.jpg" alt="Fotografía de costillar asado en plato" class="feat-img">
+            </div>
+            <div class="feat-info">
+              <h3 class="featured-title">Pancakes</h3>
+              <span class="featured-user">@clauclao</span>
+              <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a href="pages/recipes/pancakes.html" class="featured-link" title="Ver receta">Ver receta</a>
+            </div>
+          </div> 
 
-    <script src="js/script.js"></script>
+          <div class="featured-recipe">
+            <div class="featured-combo">
+              <img src="img/user_4.jpg" alt="Avatar de usuario 4" class="feat-user-img">
+              <img src="img/thumbnail_ramen.jpg" alt="Fotografía de costillar asado en plato" class="feat-img">
+            </div>
+            <div class="feat-info">
+              <h3 class="featured-title">Ramen</h3>
+              <span class="featured-user">@charleszeron</span>
+              <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a href="pages/recipes/ramen.html" class="featured-link" title="Ver receta">Ver receta</a>
+            </div>
+          </div>
+
+          <div class="featured-recipe">
+            <div class="featured-combo">
+              <img src="img/user_1.jpg" alt="Avatar de usuario 1" class="feat-user-img">
+              <img src="img/thumbnail_tarta_de_queso.jpg" alt="Fotografía de costillar asado en plato" class="feat-img">
+            </div>
+            <div class="feat-info">  
+              <h3 class="featured-title">Tarta de queso</h3>
+              <span class="featured-user">@sandr1ta</span>
+              <p class="featured-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a href="pages/recipes/tarta_de_queso.html" class="featured-link" title="Ver receta">Ver receta</a>
+            </div>
+          </div>
+        </div>
+    <main class="home-content">
+
+    </main>
+
+    <footer>
+      <span class="page-disclaimer">viexher &copy;<span id="year"></span>. Todos los derechos reservados.</span>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
