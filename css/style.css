@@ -30,17 +30,9 @@ a {
 }
 
 a:hover {
-  color: #00633f;
+  color: #005949;
 }
 
-button {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  border: none;
-}
 
 /* Menu */
 
@@ -110,7 +102,7 @@ header nav a {
 h1.hero-title, p.home-title, .home-description p {
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 5px #00472d75;
+  text-shadow: 2px 2px 5px #00594975;
 }
 
 .home-intro hr { 
@@ -123,7 +115,7 @@ h1.hero-title {
   margin-top: -25%;
   font-weight: 400;
   font-size: 2.3rem;
-  margin-bottom: 1.5rem;;
+  margin-bottom: 1rem;
 }
 
 p.home-title {
@@ -131,7 +123,7 @@ p.home-title {
   font-style: italic;
   font-size: 4.5rem;
   line-height: 5rem;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0;
 }
 
 .home-description {
@@ -139,7 +131,7 @@ p.home-title {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  background-color: #00472d75;
+  background-color: #00594975;
   border-radius: 8px;
   margin: 2rem 0;
   padding: 1.5rem 2rem;
@@ -167,6 +159,8 @@ p.home-title {
 }
 
 .featured-recipe {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   max-width: 325px;
   border-radius: 8px;
@@ -210,6 +204,11 @@ h3.featured-title {
   font-weight: 700;
 }
 
+.recipe-cat {
+  display: flex;
+  gap: 0.5rem;
+}
+
 p.featured-description {
   margin: 20px 0;
 }
@@ -238,20 +237,63 @@ a.featured-link::after{
 }
 
 a.featured-link:hover::after {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(6039%) hue-rotate(164deg) brightness(92%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(18%) saturate(2293%) hue-rotate(123deg) brightness(92%) contrast(104%);
 }
 
 
 /* Buttons */
+a.btn, a.btn-cat {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+}
 
-
-button.home-btn {
-  color: #00BF79;
+a.home-btn {
+  color: #005949;
   background-color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+}
+
+a.home-btn:hover {
+  color: #fff;
+  background-color: #005949;
+  transition: all 5ms ease-in-out;
+}
+
+a.btn-cat-meat, a.btn-cat-breakfast, a.btn-cat-fast,
+a.btn-cat-dessert, a.btn-cat-soup {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+a.btn-cat-meat {
+  background-color: #6D3754;
+}
+
+a.btn-cat-breakfast {
+  background-color: #F7931E;
+}
+
+a.btn-cat-fast {
+  background-color: #B4D966;
+}
+
+a.btn-cat-dessert {
+  background-color: #E76871;
+}
+
+a.btn-cat-soup {
+  background-color: #A14234;
 }
 
 
 /* Footer */
+
 footer {
   background-color: #1B2936;
   color: #fff;
@@ -260,4 +302,105 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* Recipe page */
+
+.recipe-img-container {
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.recipe-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.recipe-container {
+  width: 50%;
+  background-color: #fff;
+  padding: 7rem;
+}
+
+.recipe-body {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.recipe-data {
+  margin: 0.4rem 0 2rem;
+}
+
+.recipe-data .recipe-time::before,
+.recipe-data .recipe-keywords::before {
+  content: '';
+  position: relative;
+  top: 0.4rem;
+  display: inline-block;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.recipe-data .recipe-time::before {
+  background-image: url(../img/icons/timer.svg);
+}
+
+.recipe-data .recipe-keywords {
+  color: #707070;
+}
+
+.recipe-data .recipe-keywords::before {
+  background-image: url(../img/icons/label.svg);
+}
+
+section.ingredients, section.preparation {
+  margin: 3.5rem 0;
+}
+
+
+section.ingredients ul {
+  columns: 2;
+  gap: 1.5rem;
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+section.preparation ol {
+  margin: 1rem 1rem 4rem 2rem;
+}
+
+section.preparation ol li {
+  margin-bottom: 1rem;
+}
+
+section.ingredients ul li::marker,
+section.preparation ol li::marker {
+  color: #00BF79;
+  font-weight: 700;
+}
+
+.recipe-hr {
+  color: #00BF79;
+}
+
+section.recipe-user {
+  background-color:#f8f8f8;
+  border-radius: 8px;
+  display: flex;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.recipe-profile-pic {
+  border-radius: 50%;
+}
+
+.user-description a {
+  display: inline-block;
+  margin-top: 1rem;
 }
